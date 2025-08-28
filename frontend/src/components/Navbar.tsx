@@ -1,6 +1,7 @@
 import { Link, NavLink } from 'react-router-dom'
 import { Menu } from 'lucide-react'
 import { useState } from 'react'
+import Logo from './Logo'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -29,9 +30,12 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 font-semibold">
+        {/* <Link to="/" className="flex items-center gap-2 font-semibold">
           <span className="inline-block h-8 w-8 rounded-lg bg-brand-600" />
           DaidaEx
+        </Link> */}
+        <Link to="/" className="flex items-center gap-2 font-semibold">
+          <Logo />   {/* ring-shaped logo + text */}
         </Link>
         <nav className="hidden md:block">{nav}</nav>
         <div className="md:hidden">
